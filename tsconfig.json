@@ -2,7 +2,7 @@
 	"include": ["**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"],
 	"compilerOptions": {
-		"lib": ["ESNext"],
+		"lib": ["ESNext", "DOM"],
 		"target": "ES2024",
 		"module": "NodeNext",
 		"moduleDetection": "force",

@@ -9,7 +9,7 @@ This project is designed to evaluate and compare the speed and usability of vari
 - Vitest
 - Playwright
 
-The project uses TypeScript as the primary language and React as the rendering engine.
+The project uses TypeScript as the primary language and React as the rendering engine. Bun is used as the package manager and runtime.
 
 ## Project Structure
 
