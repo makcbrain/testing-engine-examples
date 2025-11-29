@@ -34,3 +34,13 @@ The project uses TypeScript as the primary language and React as the rendering e
 
 ### Naming Conventions
 - Use camelCase for file names and variables
+
+### Component Structure
+- Each component must have its own folder with the component name (e.g., `Button/`)
+- Each component folder must contain at minimum:
+  - `ComponentName.tsx` - the component file
+  - `styles.css` - the component styles
+- Use plain CSS without CSS modules
+- Import styles directly in the component: `import './styles.css'`
+- All interactive elements must include `data-testid` attributes for testing purposes
+- Follow the pattern: `data-testid="component-element-identifier"`
