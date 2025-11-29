@@ -16,6 +16,12 @@ The project uses TypeScript as the primary language and React as the rendering e
 - `components/` - React components for testing
 - `engines/` - Each testing engine has its own folder with isolated dependencies
 
+## Running Tests
+
+Each testing engine can be run using the following commands:
+- `bun run test:jest` - Run tests with Jest
+- `bun run test:bun` - Run tests with Bun test runner
+
 ## Coding Guidelines
 
 ### General Principles
