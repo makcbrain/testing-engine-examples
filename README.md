@@ -36,7 +36,8 @@ testing-engine-examples/
 │   └── TodoList/
 ├── engines/            # Isolated testing engine configurations
 │   ├── bun/
-│   └── jest/
+│   ├── jest/
+│   └── vitest/
 └── package.json
 ```
 
@@ -56,6 +57,9 @@ bun run test:jest
 
 # Run Bun test runner
 bun run test:bun
+
+# Run Vitest tests
+bun run test:vitest
 ```
 
 ## Development Scripts
