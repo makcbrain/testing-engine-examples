@@ -37,6 +37,7 @@ testing-engine-examples/
 ├── engines/            # Isolated testing engine configurations
 │   ├── bun/
 │   ├── jest/
+│   ├── playwright/
 │   └── vitest/
 └── package.json
 ```
@@ -60,6 +61,9 @@ bun run test:bun
 
 # Run Vitest tests
 bun run test:vitest
+
+# Run Playwright tests
+bun run test:playwright
 ```
 
 ## Development Scripts
