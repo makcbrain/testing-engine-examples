@@ -199,5 +199,35 @@ test.describe('Counter Component', () => {
 			await expect(page.getByTestId('counter-decrement')).toHaveAttribute('type', 'button');
 			await expect(page.getByTestId('counter-reset')).toHaveAttribute('type', 'button');
 		});
+
+		test('should render buttons with proper classes', async ({ page }) => {
+			await expect(page.getByTestId('counter-increment')).toHaveClass(/counter-button/);
+			await expect(page.getByTestId('counter-increment')).toHaveClass(/counter-button--increment/);
+
+			await expect(page.getByTestId('counter-decrement')).toHaveClass(/counter-button/);
+			await expect(page.getByTestId('counter-decrement')).toHaveClass(/counter-button--decrement/);
+
+			await expect(page.getByTestId('counter-reset')).toHaveClass(/counter-button/);
+			await expect(page.getByTestId('counter-reset')).toHaveClass(/counter-button--reset/);
+		});
+	});
+
+	test.describe('Component Structure', () => {
+		test('should render with correct main class', async ({ page }) => {
+			await expect(page.getByTestId('counter')).toHaveClass(/counter/);
+		});
+
+		test('should render title with correct class', async ({ page }) => {
+			await expect(page.getByTestId('counter-title')).toHaveClass(/counter-title/);
+		});
+
+		test('should render display with correct class', async ({ page }) => {
+			await expect(page.getByTestId('counter-display')).toHaveClass(/counter-display/);
+		});
+
+		test('should have buttons container', async ({ page }) => {
+			const buttonsContainer = page.locator('.counter-buttons');
+			await expect(buttonsContainer).toBeVisible();
+		});
 	});
 });
