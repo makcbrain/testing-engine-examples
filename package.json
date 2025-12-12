@@ -6,6 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=engines/jest/jest.config.js",
+		"test:jest:userEvent:noDelay": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=engines/jestUserEventNoDelay/jest.config.js",
 		"test:jest:fireEvent": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=engines/jestFireEvent/jest.config.js",
 		"test:bun": "bun test engines/bun/tests",
 		"test:vitest": "vitest run --config=engines/vitest/vitest.config.ts",
