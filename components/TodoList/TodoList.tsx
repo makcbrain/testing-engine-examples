@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './styles.css';
 
 type Todo = {
@@ -13,6 +13,7 @@ export const TodoList = () => {
 	const [todos, setTodos] = useState<Todo[]>([]);
 	const [inputValue, setInputValue] = useState('');
 	const [filter, setFilter] = useState<FilterType>('all');
+	const nextIdRef = useRef(1);
 
 	const addTodo = () => {
 		if (inputValue.trim() === '') {
@@ -20,7 +21,7 @@ export const TodoList = () => {
 		}
 
 		const newTodo: Todo = {
-			id: Date.now(),
+			id: nextIdRef.current++,
 			text: inputValue,
 			completed: false,
 		};
